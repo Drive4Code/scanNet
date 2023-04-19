@@ -58,17 +58,100 @@
         "scripts": []
       }
     ],
-    "hostname": [],
+    "hostname": [
+      {
+        "name": "5403FB12.catv.pool.telekom.hu",
+        "type": "PTR"
+      }
+    ],
     "macaddress": {
       "addr": "00:80:F4:03:FB:12",
       "addrtype": "mac",
       "vendor": "Telemecanique Electrique"
     }
   },
+  "84.3.251.20": {
+    "osmatch": [],
+    "ports": [],
+    "hostname": [
+      {
+        "name": "5403FB14.catv.pool.telekom.hu",
+        "type": "PTR"
+      }
+    ],
+    "macaddress": {
+      "addr": "74:46:A0:BD:A7:1B",
+      "addrtype": "mac",
+      "vendor": "Hewlett Packard"
+    }
+  },
+  "84.3.251.99": {
+    "osmatch": [
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "100",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "100"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      },
+      {
+        "protocol": "tcp",
+        "portid": "25",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "smtp",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [
+      {
+        "name": "5403FB63.catv.pool.telekom.hu",
+        "type": "PTR"
+      }
+    ],
+    "macaddress": {
+      "addr": "F0:92:1C:E4:D2:D6",
+      "addrtype": "mac",
+      "vendor": "Hewlett Packard"
+    }
+  },
   "84.3.251.40": {
     "osmatch": [],
     "ports": [],
-    "hostname": [],
+    "hostname": [
+      {
+        "name": "5403FB28.catv.pool.telekom.hu",
+        "type": "PTR"
+      }
+    ],
     "macaddress": null
   }
 }

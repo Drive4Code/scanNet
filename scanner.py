@@ -2,7 +2,7 @@ import nmap3, json, sys, os
 import pprint
 
 # Ideas
-# Make the program check if there's a scan.json, and if there is run a different scan, highlight the differences, and output them to a diff.json (which doesn't have to be scanned each time)
+# Make the program check if there's a scan.json, and if there is run a different scan, highlight the differences, and output them to a diff.json (which doesn't have to be scanned each time); make a check whether its running as root
 
 class scanNet():
     # Scans the network, filters through every IP address, and attempts to identify OS model
@@ -11,18 +11,19 @@ class scanNet():
         self.nmHD = nmap3.NmapHostDiscovery()
         self.ipAddr = '84.3.251.0/24' # 84.3.251.0/24
         self.outDir = os.path.join('output','output.json')
-        self.scan = self.nmHD.nmap_no_portscan(self.ipAddr)
+        
 
     def getHostsUp(self):
         # Removes from the list all hosts that aren't up
         # print(self.scan)
+        scan = self.nmHD.nmap_no_portscan(self.ipAddr)
         parsedScan = {}
-        for host in self.scan:
+        for host in scan:
             try:
-                values = self.scan[host]
+                values = scan[host]
                 state = values['state']
                 if state['state'] != 'down':
-                    parsedScan[host] = self.scan[host]
+                    parsedScan[host] = scan[host]
                 # print("EOF")
             except:
                 None 
@@ -36,8 +37,8 @@ class scanNet():
         for host in scan:
             if ports == 'fast':
                 newScan[host] = self.nm.nmap_os_detection(host, args=f'-F --max-os-tries 1 --osscan-limit --osscan-guess')
-            elif ports != 'Null':
-                newScan[host] = self.nm.nmap_os_detection(host, args=f'-p {ports}')
+            elif ports != None:
+                newScan[host] = self.nm.nmap_os_detection(host, args=f'-p {ports} -r')
             else:
                 newScan[host] = self.nm.nmap_os_detection(host, args='')
         # Clean the newScan
@@ -71,7 +72,7 @@ class scanNet():
 if __name__ == '__main__':
     sc = scanNet()
     pp = pprint.PrettyPrinter()
-    port = 'Null'
+    port = None
     argList = sys.argv
     if argList.__contains__("-p") and (argList.__contains__("-F") or argList.__contains__("-f") or argList.__contains__("--fast")):
         # Addresses a rare instance where the User Specifies both ports and fast mode at the same time
@@ -90,6 +91,11 @@ if __name__ == '__main__':
         port = 'fast'
         scan = sc.cleanScan()
         sc.dumpToJson(scan)
+    else:
+        scan = sc.cleanScan()
+        sc.dumpToJson(scan)
+
+
     if argList.__contains__('-i'):
         # Reads a JSON as an input. Requires a path to the JSON. It then compares and highlights the difference between the current status and the provided JSON
         filePath = argList[argList.index("-i") + 1]
