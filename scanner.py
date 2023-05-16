@@ -1,9 +1,6 @@
 import nmap3, json, sys, os
 import pprint
 
-# Ideas
-# Make the program check if there's a scan.json, and if there is run a different scan, highlight the differences, and output them to a diff.json (which doesn't have to be scanned each time); make a check whether its running as root
-
 class scanNet():
     # Scans the network, filters through every IP address, and attempts to identify OS model
     def __init__(self):
@@ -49,6 +46,7 @@ class scanNet():
     def dumpToJson(self, scan):
         # Dumps the scan to a Json file
         with open(self.outDir, 'w') as outFile:
+            scan = scan.replace("'", '"')
             json.dump(scan, outFile, indent=2)
 
     def cleanScan(self):
