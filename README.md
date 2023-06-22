@@ -7,12 +7,7 @@ Ultimately the program will be used in the industrial field, in order to list al
     <li>Run the program though <code>python3 scanner.py -i IP_ADDR_RANGE</code></li>
 </ol>
 <p>The program will run on the specified ip range. It will generate a JSON called <code>output.json</code> under the output directory.</p>
-<p>For more information, you can use the -h flag which will generate the following:</p>
 <p>
--i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24\
--p  Specifies the ports or port range to scan\
--f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports\
--i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24\
--p  Specifies the ports or port range to scan\
--f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports. <a href="https://nmap.org/book/man-port-specification.html">Documentation</a>
+To specify Ports or a Range of Port use the -p flag. <a href="https://nmap.org/book/man-port-specification.html">Nmap Port Documentation</a>
 </p>
+<p>For more information, you can use the -h flag which will generate the following:</p>
