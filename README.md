@@ -8,11 +8,11 @@ Ultimately the program will be used in the industrial field, in order to list al
 </ol>
 <p>The program will run on the specified ip range. It will generate a JSON called <code>output.json</code> under the output directory.</p>
 <p>For more information, you can use the -h flag which will generate the following:</p>
-<code>
--i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24
--p  Specifies the ports or port range to scan
--f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports
--i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24
--p  Specifies the ports or port range to scan
+<p>
+-i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24\
+-p  Specifies the ports or port range to scan\
+-f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports\
+-i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24\
+-p  Specifies the ports or port range to scan\
 -f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports. <a href="https://nmap.org/book/man-port-specification.html">Documentation</a>
-</code>
+</p>
