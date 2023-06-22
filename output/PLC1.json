@@ -1,0 +1,335 @@
+{
+  "192.168.101.1": {
+    "osmatch": [
+      {
+        "name": "Linux 2.6.32",
+        "accuracy": "96",
+        "line": "55363",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "2.6.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:2.6.32"
+      },
+      {
+        "name": "Linux 3.2 - 4.9",
+        "accuracy": "96",
+        "line": "65314",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "4.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:4"
+      },
+      {
+        "name": "Linux 2.6.32 - 3.10",
+        "accuracy": "96",
+        "line": "56571",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3"
+      },
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "96",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "Linux 5.3 - 5.4",
+        "accuracy": "96",
+        "line": "68140",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "LG Bp430 Blu-ray Player",
+        "accuracy": "95",
+        "line": "43630",
+        "osclass": {
+          "type": "media device",
+          "vendor": "LG",
+          "osfamily": "embedded",
+          "accuracy": "95"
+        }
+      },
+      {
+        "name": "Linux 3.1",
+        "accuracy": "95",
+        "line": "62917",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3.1"
+      },
+      {
+        "name": "Linux 3.2",
+        "accuracy": "95",
+        "line": "64664",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3.2"
+      },
+      {
+        "name": "Linux 5.0 - 5.3",
+        "accuracy": "95",
+        "line": "68082",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "AXIS 210A or 211 Network Camera (Linux 2.6.17)",
+        "accuracy": "94",
+        "line": "61815",
+        "osclass": {
+          "type": "webcam",
+          "vendor": "AXIS",
+          "osfamily": "embedded",
+          "accuracy": "94"
+        },
+        "cpe": "cpe:/h:axis:211_network_camera"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "16:54:B3:95:8D:0B",
+      "addrtype": "mac"
+    }
+  },
+  "192.168.101.10": {
+    "osmatch": [],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "502",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "mbap",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "00:80:F4:53:EB:77",
+      "addrtype": "mac",
+      "vendor": "Telemecanique Electrique"
+    }
+  },
+  "192.168.101.11": {
+    "osmatch": [
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "100",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "100"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "B8:27:EB:F1:FD:7E",
+      "addrtype": "mac",
+      "vendor": "Raspberry Pi Foundation"
+    }
+  },
+  "192.168.101.12": {
+    "osmatch": [
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "100",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "100"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "B8:27:EB:80:B4:BF",
+      "addrtype": "mac",
+      "vendor": "Raspberry Pi Foundation"
+    }
+  },
+  "192.168.101.13": {
+    "osmatch": [
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "100",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "100"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "B8:27:EB:6B:8F:E0",
+      "addrtype": "mac",
+      "vendor": "Raspberry Pi Foundation"
+    }
+  },
+  "192.168.101.14": {
+    "osmatch": [
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "100",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "100"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "B8:27:EB:A4:3E:42",
+      "addrtype": "mac",
+      "vendor": "Raspberry Pi Foundation"
+    }
+  }
+}

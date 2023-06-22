@@ -1,0 +1,388 @@
+{
+  "192.168.103.1": {
+    "osmatch": [
+      {
+        "name": "Linux 2.6.32",
+        "accuracy": "96",
+        "line": "55363",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "2.6.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:2.6.32"
+      },
+      {
+        "name": "Linux 3.2 - 4.9",
+        "accuracy": "96",
+        "line": "65314",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "4.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:4"
+      },
+      {
+        "name": "Linux 2.6.32 - 3.10",
+        "accuracy": "96",
+        "line": "56571",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3"
+      },
+      {
+        "name": "Linux 4.15 - 5.6",
+        "accuracy": "96",
+        "line": "67238",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "Linux 5.3 - 5.4",
+        "accuracy": "96",
+        "line": "68140",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "96"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "LG Bp430 Blu-ray Player",
+        "accuracy": "95",
+        "line": "43630",
+        "osclass": {
+          "type": "media device",
+          "vendor": "LG",
+          "osfamily": "embedded",
+          "accuracy": "95"
+        }
+      },
+      {
+        "name": "Linux 3.1",
+        "accuracy": "95",
+        "line": "62917",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3.1"
+      },
+      {
+        "name": "Linux 3.2",
+        "accuracy": "95",
+        "line": "64664",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "3.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:3.2"
+      },
+      {
+        "name": "Linux 5.0 - 5.3",
+        "accuracy": "95",
+        "line": "68082",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Linux",
+          "osfamily": "Linux",
+          "osgen": "5.X",
+          "accuracy": "95"
+        },
+        "cpe": "cpe:/o:linux:linux_kernel:5"
+      },
+      {
+        "name": "AXIS 210A or 211 Network Camera (Linux 2.6.17)",
+        "accuracy": "94",
+        "line": "61815",
+        "osclass": {
+          "type": "webcam",
+          "vendor": "AXIS",
+          "osfamily": "embedded",
+          "accuracy": "94"
+        },
+        "cpe": "cpe:/h:axis:211_network_camera"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "22",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "ssh",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "D2:5D:BE:9F:0C:F6",
+      "addrtype": "mac"
+    }
+  },
+  "192.168.103.10": {
+    "osmatch": [
+      {
+        "name": "Dell Remote Access Controller 4 (DRAC 4)",
+        "accuracy": "88",
+        "line": "22044",
+        "osclass": {
+          "type": "remote management",
+          "vendor": "Dell",
+          "osfamily": "embedded",
+          "accuracy": "88"
+        },
+        "cpe": "cpe:/h:dell:remote_access_card:4"
+      },
+      {
+        "name": "Dell Embedded Remote Access (ERA) Controller 3.38 or 4/I",
+        "accuracy": "88",
+        "line": "21721",
+        "osclass": {
+          "type": "remote management",
+          "vendor": "Dell",
+          "osfamily": "embedded",
+          "accuracy": "88"
+        },
+        "cpe": "cpe:/h:dell:remote_access_card:4"
+      },
+      {
+        "name": "OpenBSD 4.4 - 4.6",
+        "accuracy": "87",
+        "line": "91295",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "4.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:4"
+      },
+      {
+        "name": "OpenBSD 4.9 - 5.4",
+        "accuracy": "87",
+        "line": "91574",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "5.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:5"
+      },
+      {
+        "name": "OpenBSD 5.6 - 5.8",
+        "accuracy": "87",
+        "line": "91859",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "5.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:5"
+      },
+      {
+        "name": "OpenBSD 6.1 - 6.4",
+        "accuracy": "87",
+        "line": "92121",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "6.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:6"
+      },
+      {
+        "name": "OpenBSD 3.9 - 4.4",
+        "accuracy": "87",
+        "line": "90744",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "4.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:4"
+      },
+      {
+        "name": "OpenBSD 4.3",
+        "accuracy": "87",
+        "line": "91148",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "4.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:4.3"
+      },
+      {
+        "name": "OpenBSD 5.2 - 5.3",
+        "accuracy": "87",
+        "line": "91712",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "5.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:5"
+      },
+      {
+        "name": "OpenBSD 5.4",
+        "accuracy": "87",
+        "line": "91767",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "OpenBSD",
+          "osfamily": "OpenBSD",
+          "osgen": "5.X",
+          "accuracy": "87"
+        },
+        "cpe": "cpe:/o:openbsd:openbsd:5.4"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "102",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "64",
+        "service": {
+          "name": "iso-tsap",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "8C:F3:19:B4:FA:6F",
+      "addrtype": "mac",
+      "vendor": "Siemens Industrial Automation Products, Chengdu"
+    }
+  },
+  "192.168.103.16": {
+    "osmatch": [
+      {
+        "name": "Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2",
+        "accuracy": "86",
+        "line": "75297",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Microsoft",
+          "osfamily": "Windows",
+          "osgen": "2008",
+          "accuracy": "86"
+        },
+        "cpe": "cpe:/o:microsoft:windows_server_2008:r2"
+      },
+      {
+        "name": "Microsoft Windows XP SP3",
+        "accuracy": "85",
+        "line": "84871",
+        "osclass": {
+          "type": "general purpose",
+          "vendor": "Microsoft",
+          "osfamily": "Windows",
+          "osgen": "XP",
+          "accuracy": "85"
+        },
+        "cpe": "cpe:/o:microsoft:windows_xp::sp3"
+      }
+    ],
+    "ports": [
+      {
+        "protocol": "tcp",
+        "portid": "135",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "128",
+        "service": {
+          "name": "msrpc",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      },
+      {
+        "protocol": "tcp",
+        "portid": "139",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "128",
+        "service": {
+          "name": "netbios-ssn",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      },
+      {
+        "protocol": "tcp",
+        "portid": "445",
+        "state": "open",
+        "reason": "syn-ack",
+        "reason_ttl": "128",
+        "service": {
+          "name": "microsoft-ds",
+          "method": "table",
+          "conf": "3"
+        },
+        "cpe": [],
+        "scripts": []
+      }
+    ],
+    "hostname": [],
+    "macaddress": {
+      "addr": "3C:52:82:70:FE:1A",
+      "addrtype": "mac",
+      "vendor": "Hewlett Packard"
+    }
+  }
+}

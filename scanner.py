@@ -1,18 +1,17 @@
-import nmap3, json, sys, os
+import nmap3, json, sys, os, subprocess
 import pprint
 
 class scanNet():
     # Scans the network, filters through every IP address, and attempts to identify OS model
-    def __init__(self):
+    def __init__(self, ip):
         self.nm = nmap3.Nmap()
         self.nmHD = nmap3.NmapHostDiscovery()
-        self.ipAddr = '84.3.251.0/24' # 84.3.251.0/24
+        self.ipAddr = ip # 84.3.251.0/24
         self.outDir = os.path.join('output','output.json')
         
 
     def getHostsUp(self):
         # Removes from the list all hosts that aren't up
-        # print(self.scan)
         scan = self.nmHD.nmap_no_portscan(self.ipAddr)
         parsedScan = {}
         for host in scan:
@@ -21,15 +20,12 @@ class scanNet():
                 state = values['state']
                 if state['state'] != 'down':
                     parsedScan[host] = scan[host]
-                # print("EOF")
             except:
                 None 
-        # print(parsedScan)
         return parsedScan
 
     def osDetection(self, scan, ports):
-        # Detects the os for all hosts that are up
-        # print(scan)
+        # Detects the OS & Ports Up for all hosts that are up
         newScan = {}
         for host in scan:
             if ports == 'fast':
@@ -38,18 +34,26 @@ class scanNet():
                 newScan[host] = self.nm.nmap_os_detection(host, args=f'-p {ports} -r')
             else:
                 newScan[host] = self.nm.nmap_os_detection(host, args='')
-        # Clean the newScan
-        for host in newScan:
-            newScan[host] = newScan[host][host]
+        # Simplyfy the Scan, removing nested Dictionaries
+        try:
+            for host in newScan:
+                newScan[host] = newScan[host][host]
+        except KeyError():
+            print("WARN scan couldn't be simplified")
         return newScan
+
+    def filterScan(self,scan):
+        # Removes the Ip of the machine the scan was executed on
+        pass
 
     def dumpToJson(self, scan):
         # Dumps the scan to a Json file
         with open(self.outDir, 'w') as outFile:
-            scan = scan.replace("'", '"')
             json.dump(scan, outFile, indent=2)
+            outFile.close()
 
     def cleanScan(self):
+        # Executes a Quick Scan to List all Hosts, and an OS Scan, Returning a Dictionary
         listScan = self.getHostsUp()
         print('List Scan: ')
         pp.pprint(listScan)
@@ -63,15 +67,36 @@ class scanNet():
                 osMatch = hostVals['osmatch'][0]
                 print(osMatch['name'])
             except:
-                print(f'Os not Found on {host}')
+                print(f'Os Not Found on {host}')
         return osScan
 
 
 if __name__ == '__main__':
-    sc = scanNet()
+    # First and foremost, check if the script is running as root. If not, it calls itself back and runs it as such:
+    print('Running as UID %d' % os.geteuid())
+    if os.geteuid() != 0:
+        try:
+            subprocess.check_call(['sudo', sys.executable] + sys.argv)
+        except:
+            raise Exception("The program must be ran as Root.")
+    
+    # The program immediately checks for the flags to understand how to run everything
+    argList = sys.argv
+    try:
+        argList.index('-h')
+        print('-i  Input the Ip Address(es) You want to scan. Example: 84.3.251.0/24 \n-p  Specifies the ports or port range to scan  \n-f or --fast  Uses some tricks to reduce the osScan Times. Note this disables the ability to specfy ports')
+        exit()
+    except ValueError:
+        None
+    
+    try:
+        ipAddr = argList[argList.index('-i')+1]
+    except ValueError:
+        raise Exception("Please provide an IP Address with the -i flag")
+    sc = scanNet(ipAddr)
     pp = pprint.PrettyPrinter()
     port = None
-    argList = sys.argv
+    
     if argList.__contains__("-p") and (argList.__contains__("-F") or argList.__contains__("-f") or argList.__contains__("--fast")):
         # Addresses a rare instance where the User Specifies both ports and fast mode at the same time
         print("The Fast argument and the Port specification can't go together. FAST mode will be activated")
@@ -79,12 +104,13 @@ if __name__ == '__main__':
         scan = sc.cleanScan()
         sc.dumpToJson(scan)
     elif argList.__contains__("-p"):
-        # Specifies the ports to be scan. Can be specified with a range (1-1000) or single port. Checkout the nmap docs for more info
+        # Specifies the ports to be scaned. Can be specified with a range (1-1000) or single port. Checkout the nmap docs for more info
         port = argList[argList.index("-p") + 1]
         print(f'Ports to Be Scanned: {port}')
         scan = sc.cleanScan()
         sc.dumpToJson(scan)
     elif argList.__contains__('-f') or argList.__contains__('-F') or argList.__contains__('--fast'):
+        # Scans the top 100 ports, and passes some arguments to speed nmap up
         print('FAST mode Active')
         port = 'fast'
         scan = sc.cleanScan()
@@ -92,10 +118,5 @@ if __name__ == '__main__':
     else:
         scan = sc.cleanScan()
         sc.dumpToJson(scan)
-
-
-    if argList.__contains__('-i'):
-        # Reads a JSON as an input. Requires a path to the JSON. It then compares and highlights the difference between the current status and the provided JSON
-        filePath = argList[argList.index("-i") + 1]
         
     
